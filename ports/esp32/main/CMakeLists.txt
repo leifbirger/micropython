@@ -43,6 +43,7 @@ set(MICROPY_SOURCE_DRIVERS
     ${MICROPY_DIR}/drivers/dht/dht.c
 )
 
+# leif
 set(MICROPY_SOURCE_PORT
     ${PROJECT_DIR}/main.c
     ${PROJECT_DIR}/uart.c
@@ -80,6 +81,7 @@ set(MICROPY_SOURCE_PORT
     ${PROJECT_DIR}/mpthreadport.c
     ${PROJECT_DIR}/machine_rtc.c
     ${PROJECT_DIR}/machine_sdcard.c
+    ${PROJECT_DIR}/modcamera.c
 )
 
 set(MICROPY_SOURCE_QSTR
@@ -91,6 +93,7 @@ set(MICROPY_SOURCE_QSTR
     ${MICROPY_SOURCE_PORT}
 )
 
+# leif
 set(IDF_COMPONENTS
     app_update
     bootloader_support
@@ -117,6 +120,7 @@ set(IDF_COMPONENTS
     ulp
     vfs
     xtensa
+    esp32-camera
 )
 
 if(IDF_VERSION_MINOR GREATER_EQUAL 1)
