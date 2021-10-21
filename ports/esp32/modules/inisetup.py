@@ -40,10 +40,13 @@ def setup():
         f.write(
             """\
 # This file is executed on every boot (including wake-boot from deepsleep)
-#import esp
-#esp.osdebug(None)
-#import webrepl
-#webrepl.start()
+import esp
+esp.osdebug(None)
+import webrepl
+webrepl.start()
+print("Leif boot special")
+import wifi_init
+import m5stickcp_init
 """
         )
     return vfs

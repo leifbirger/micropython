@@ -1,0 +1,1 @@
+import networkwlan = network.WLAN(network.STA_IF)wlan.active(True)wlan.connect('ZOPPS1234', '11223344556677889900112233')wlan.ifconfig()wlan.config(dhcp_hostname="m5stickcp")

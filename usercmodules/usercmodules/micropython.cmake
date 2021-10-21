@@ -12,15 +12,5 @@ include(${CMAKE_CURRENT_LIST_DIR}/cppexample/micropython.cmake)
 # Add the st7789 dislay
 include(${CMAKE_CURRENT_LIST_DIR}/st7789/micropython.cmake)
 
-# Add the st7789 dislay from original devbis/st7789_mpy
-include(${CMAKE_CURRENT_LIST_DIR}/st7789_devbis/micropython.cmake)
-
-# Add the st7789 dislay from russhughes/st7789_mpy
-include(${CMAKE_CURRENT_LIST_DIR}/st7789_russhughes/micropython.cmake)
-
-# Add the st7789 dislay from russhughes/st7789_mpy
-include(${CMAKE_CURRENT_LIST_DIR}/st7789_russhughes2/micropython.cmake)
-
-
 # Add the test files
 include(${CMAKE_CURRENT_LIST_DIR}/simpleclass/micropython.cmake)
