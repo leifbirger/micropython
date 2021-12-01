@@ -1,28 +1,52 @@
 import machine
-from machine import Pin
 from time import sleep
+    
+class LED():
+    
+    def __init__(self):
+        from machine import Pin
+        self.led = Pin (10, Pin.OUT)
+        self.on()
+        sleep(1)
+        self.off()
+        
 
-led = Pin (10, Pin.OUT)
-
-def blink():
-    #blink LED
-    print("Led blink start")
-    led.value(1)
-    sleep(1)
-    led.value(0)
+    def on(self):
+        self.led.value(0)
+        
+    def off(self):
+        self.led.value(1)
 
 
+    def blinkNoOf(self,noOf):
+        x = range(noOf)
+        for n in x:
+            self.on()
+            sleep(1)
+            self.off()
+            sleep(1)
 
-    sleep(1)
-    led.value(1)
-    sleep(1)
-    led.value(0)
-    sleep(1)
-    led.value(1)
-    print("Led blink stoped")
+    def blink(self):
+        print("Led blink start")
+        self.off()
+        sleep(1)
+        self.blinkNoOf(3)
+        print("Led blink stoped")
 
 
 if __name__ == "__main__":
-    blink()
+    
+
+    led = LED()
+    
+    led.on()
+    led.blink()
+    led.on()
+    sleep(2)
+    led.off()
+    sleep(2)
+    led.on()
+    
+    led.blinkNoOf(5)
 
 
