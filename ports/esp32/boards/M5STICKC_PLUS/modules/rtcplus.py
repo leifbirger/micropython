@@ -8,6 +8,16 @@ class RTCPLUS(PCF8563):
     def __init__(self, i2):
         PCF8563.__init__(self, i2)
 
+    def datetime(self, data=None):
+        if data == None:
+            return_data = PCF8563.datetime(self)
+            return return_data
+        else:
+            data_l = list(data)
+            list_lenght = len(data_l)
+            if list_lenght == 8:
+                del data_l[7]
+            PCF8563.datetime(self, data_l)
 
     def print_rtc(self):
         print("RTCplus")
@@ -39,6 +49,10 @@ if __name__ == "__main__":
     rtc_m5.datetime(rtc_esp32_data_l)
     rtc_m5_data = rtc_m5.datetime()
     print(rtc_m5_data)
+    rtc_m5.datetime(rtc_esp32_data)
+    rtc_m5_data = rtc_m5.datetime()
+    print(rtc_m5_data)   
+    
     print()
 
 

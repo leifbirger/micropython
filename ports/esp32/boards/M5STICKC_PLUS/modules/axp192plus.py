@@ -2,10 +2,10 @@ import machine
 from machine import Pin
 from time import sleep
 
-from axp192 import AXP192
+from axp192 import AXP192 
 class AXP192PLUS(AXP192):
     
-    def __init__(self, i2):
+    def __init__(self, i2): 
         #from machine import SoftI2C as I2C
         #i2 = I2C(scl=Pin(22), sda=Pin(21), freq=400000)
         import axp192
@@ -15,6 +15,9 @@ class AXP192PLUS(AXP192):
 
     def power_sleep(self):
         self.write(0x12, 0x01)
+
+    def power_wakeup(self):
+        self.write(0x12, 0x0f)
 
     def print_axp_values(self):
         print("Power status")
