@@ -21,10 +21,12 @@ class M5STICKCP(AXP192PLUS, LED, ST7789PLUS, BUTTON, RTCPLUS, SOUND):
         ST7789PLUS.__init__(self)
         BUTTON.__init__(self)
         RTCPLUS.__init__(self, i2)
-        SOUND.__init__(self)
-        self.wlan = WIFI('','')
 
-    def reset(self):
+        self.wlan = WIFI('','')
+        SOUND.__init__(self)
+        
+        
+    def cpu_reset(self):
         print("m5stickcp reset")
         sleep(1)
         machine.reset()
