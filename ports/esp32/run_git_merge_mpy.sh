@@ -1,19 +1,19 @@
 #!/bin/bash
 
-cd ../../micropython
+cd ../..
 
-BRANCH-MPY = master
+BRANCH_MPY=master
 
 git status
 git branch -v
-git checkout $BRANCH-MPY
+git checkout $BRANCH_MPY
 git status
 git add -A
 git commit -m "new release branch x"
 git status
 
 git fetch upstream
-git merge upstream/$BRANCH-MPY
+git merge upstream/$BRANCH_MPY
 git status
 git commit -m "new release branch x"
 git status

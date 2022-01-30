@@ -2,18 +2,18 @@
 
 cd ../../../esp-idf
 
-BRANCH-IDF = release/v4.3
+BRANCH_IDF=release/v4.4
 
 git status
 git branch -v
-git checkout $BRANCH-IDF
+git checkout $BRANCH_IDF
 git status
 git add -A
 git commit -m "new release branch x"
 git status
 
 git fetch upstream
-git merge upstream/$BRANCH-IDF
+git merge upstream/$BRANCH_IDF
 git status
 git add -A
 git commit -m "new release branch x"
