@@ -14,3 +14,6 @@ include(${CMAKE_CURRENT_LIST_DIR}/st7789/micropython.cmake)
 
 # Add the test files
 include(${CMAKE_CURRENT_LIST_DIR}/simpleclass/micropython.cmake)
+
+# Add the bmm150 leif C version
+include(${CMAKE_CURRENT_LIST_DIR}/bmm150_l/micropython.cmake)

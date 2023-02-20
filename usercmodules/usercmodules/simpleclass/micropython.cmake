@@ -2,7 +2,7 @@
 add_library(usermod_simpleclass INTERFACE)
 
 # Add our source files to the library.
-target_sources(usermod_cppexample INTERFACE
+target_sources(usermod_simpleclass INTERFACE
     ${CMAKE_CURRENT_LIST_DIR}/simpleclass.c
 )
 

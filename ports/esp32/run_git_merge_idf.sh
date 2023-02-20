@@ -18,6 +18,7 @@ git status
 git add -A
 git commit -m "new release branch x"
 git status
-git submodule update --init --recursive
+#git submodule update --init --recursive
+git submodule update  --recursive
 git status
 

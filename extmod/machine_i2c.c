@@ -507,7 +507,7 @@ STATIC size_t fill_memaddr_buf(uint8_t *memaddr_buf, uint32_t memaddr, uint8_t a
     return memaddr_len;
 }
 
-STATIC int read_mem(mp_obj_t self_in, uint16_t addr, uint32_t memaddr, uint8_t addrsize, uint8_t *buf, size_t len) {
+int read_mem(mp_obj_t self_in, uint16_t addr, uint32_t memaddr, uint8_t addrsize, uint8_t *buf, size_t len) {
     mp_obj_base_t *self = (mp_obj_base_t *)MP_OBJ_TO_PTR(self_in);
 
     // Create buffer with memory address
@@ -523,7 +523,7 @@ STATIC int read_mem(mp_obj_t self_in, uint16_t addr, uint32_t memaddr, uint8_t a
     return mp_machine_i2c_readfrom(self, addr, buf, len, true);
 }
 
-STATIC int write_mem(mp_obj_t self_in, uint16_t addr, uint32_t memaddr, uint8_t addrsize, const uint8_t *buf, size_t len) {
+int write_mem(mp_obj_t self_in, uint16_t addr, uint32_t memaddr, uint8_t addrsize, const uint8_t *buf, size_t len) {
     mp_obj_base_t *self = (mp_obj_base_t *)MP_OBJ_TO_PTR(self_in);
 
     // Create buffer with memory address
